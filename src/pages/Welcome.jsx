@@ -211,10 +211,10 @@ export default function Welcome() {
                     {/* Main Login Button */}
                     <Button
                       onClick={handleLogin}
-                      className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white h-14 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-green-500/50 hover:brightness-110"
+                      className="w-full bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white h-14 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-green-400/75 hover:brightness-125 border-2 border-green-300/30"
                     >
                       <LogIn className="w-5 h-5 mr-3" />
-                      Accedi con Google
+                      🔥 ACCEDI CON GOOGLE 🔥
                       <ArrowRight className="w-5 h-5 ml-3" />
                     </Button>
 
@@ -388,10 +388,10 @@ export default function Welcome() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 onClick={handleLogin}
-                className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 text-lg font-medium rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-green-500/50 hover:brightness-110"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 text-lg font-medium rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-blue-500/50 hover:brightness-125 border-2 border-blue-300/30"
               >
                 <Sparkles className="w-5 h-5 mr-2" />
-                Inizia la Valutazione Gratuita
+                🚀 INIZIA LA VALUTAZIONE 🚀
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button
@@ -408,7 +408,7 @@ export default function Welcome() {
       </section>
 
       {/* Footer Completo */}
-      <footer className="py-12 bg-slate-900/80 backdrop-blur-sm border-t border-slate-800 relative z-10">
+      <footer className="py-8 bg-red-900/80 backdrop-blur-sm border-t border-red-800 relative z-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-6 mb-6">
             {/* Logo e Descrizione */}
