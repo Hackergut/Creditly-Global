@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { CreditRequest } from "@/api/entities";
 import { ArrowLeft, TrendingUp, FileText, PieChart, Zap, Shield, Clock } from "lucide-react";
 import DocumentUpload from "./DocumentUpload";
 

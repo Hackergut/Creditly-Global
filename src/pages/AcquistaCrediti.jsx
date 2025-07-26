@@ -2,9 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { CreditListing } from "@/api/entities";
-import { User } from "@/api/entities";
-import { PurchaseRequest } from "@/api/entities"; // Added import for PurchaseRequest
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -129,22 +126,7 @@ export default function AcquistaCrediti() {
         status: 'pending' // Initial status for the purchase request
       });
 
-      // Chiama la funzione per inviare email di conferma con firma digitale
-      const { sendPurchaseConfirmation } = await import('@/api/functions');
-      
-      await sendPurchaseConfirmation({
-        purchaseRequestId: purchaseRequest.id,
-        creditListing: creditListing,
-        buyerData: {
-          ...formData,
-          email: user.email,
-          buyer_company: user.company_name,
-          buyer_vat: user.vat_number,
-          full_name: user.full_name,
-          company_name: user.company_name,
-          vat_number: user.vat_number,
-        }
-      });
+      // TODO: Implementare invio email di conferma con Supabase
 
       setSuccess(true);
       // Reset only the actual form inputs that are user-editable

@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { MessageCircle, X, Send, Bot, User } from "lucide-react";
-import { chatbot } from "@/api/functions";
 
 // Componente messaggio ottimizzato
 const Message = React.memo(({ message, isUser }) => (

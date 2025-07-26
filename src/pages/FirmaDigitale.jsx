@@ -6,9 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
-import { PurchaseRequest } from "@/api/entities";
-import { CreditListing } from "@/api/entities";
-import { User } from "@/api/entities";
 import {
   Shield,
   FileText,

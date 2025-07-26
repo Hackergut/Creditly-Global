@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import { format, isToday, parseISO } from "date-fns";
 import { it } from "date-fns/locale";
-import { InvokeLLM } from "@/api/integrations";
 
 export default function NewsCarousel() {
   const [news, setNews] = useState([]);
