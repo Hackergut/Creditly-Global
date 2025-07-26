@@ -118,12 +118,14 @@ export default function Welcome() {
   ];
 
   return (
-    <div className="min-h-screen antialiased overflow-x-hidden text-slate-100 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen antialiased overflow-x-hidden text-slate-100 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex flex-col">
       {/* Background Effects */}
       <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-green-400/10 via-transparent to-transparent pointer-events-none"></div>
       <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-purple-400/5 via-transparent to-transparent pointer-events-none"></div>
 
-      {/* Header */}
+      {/* Main Content */}
+      <div className="flex-1">
+        {/* Header */}
       <header className="py-6 relative z-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between">
@@ -332,7 +334,14 @@ export default function Welcome() {
                       {credit.description}
                     </p>
                     <div className="flex items-center text-sm font-medium group-hover:translate-x-1 transition-transform">
-                      Scopri di più <ChevronRight className="w-4 h-4 ml-1" />
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="border-green-400/30 text-green-400 hover:bg-green-400/20 hover:text-green-300 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
+                      >
+                        Scopri come funziona
+                        <ChevronRight className="w-4 h-4 ml-1" />
+                      </Button>
                     </div>
                   </CardContent>
                 </Card>
@@ -406,9 +415,10 @@ export default function Welcome() {
           </div>
         </div>
       </section>
+      </div>
 
       {/* Footer Completo */}
-      <footer className="py-8 bg-red-900/80 backdrop-blur-sm border-t border-red-800 relative z-10">
+      <footer className="py-8 bg-red-900/80 backdrop-blur-sm border-t border-red-800 relative z-10 mt-auto">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-6 mb-6">
             {/* Logo e Descrizione */}
