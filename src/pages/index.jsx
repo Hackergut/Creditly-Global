@@ -49,6 +49,7 @@ import Settings from "./Settings";
 import FirmaDigitale from "./FirmaDigitale";
 
 import Login from "./Login.jsx";
+import AuthCallback from "./AuthCallback.jsx";
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { ProtectedRoute, PublicRoute } from "@/components/ProtectedRoute";
@@ -139,6 +140,7 @@ function PagesContent() {
                 
                 {/* Auth Routes */}
                 <Route path="/login" element={<Login />} />
+                <Route path="/auth/callback" element={<AuthCallback />} />
                 
                 {/* Protected Routes */}
                 <Route path="/Onboarding" element={

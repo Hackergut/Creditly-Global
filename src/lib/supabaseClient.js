@@ -46,7 +46,7 @@ export const auth = {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${window.location.origin}/auth/callback`
+        redirectTo: 'https://www.creditlyglobal.com/auth/callback'
       }
     })
     return { data, error }
