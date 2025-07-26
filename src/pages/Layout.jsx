@@ -37,7 +37,7 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
-import FloatingChatbot from './components/chatbot/FloatingChatbot';
+import FloatingChatbot from '@/components/chatbot/FloatingChatbot';
 
 const navigationItems = [
   {
