@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { User } from "@/api/entities";
+import React from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -14,34 +15,11 @@ import {
 } from "lucide-react";
 
 export default function Home() {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const { user, loading } = useAuth();
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    checkAuth();
-  }, []);
-
-  const checkAuth = async () => {
-    try {
-      const userData = await User.me();
-      if (userData) {
-        // Se autenticato, reindirizza alla dashboard
-        window.location.href = "/dashboard";
-        return;
-      }
-    } catch (error) {
-      // Non autenticato, mostra la homepage
-      console.log("Showing public homepage");
-    }
-    setLoading(false);
-  };
-
-  const handleLogin = async () => {
-    try {
-      await User.login();
-    } catch (error) {
-      console.error("Login error:", error);
-    }
+  const handleLogin = () => {
+    navigate('/login');
   };
 
   if (loading) {
