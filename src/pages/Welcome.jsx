@@ -135,7 +135,7 @@ export default function Welcome() {
                 alt="Creditly Global"
                 className="w-8 h-8 rounded-lg"
               />
-              <span className="text-xl font-semibold tracking-tight text-white">Creditly Global</span>
+              <span className="text-xl font-semibold tracking-tight text-red-500">🔥 CREDITLY GLOBAL TEST 🔥</span>
             </div>
 
             <div className="flex items-center space-x-4">
@@ -164,11 +164,11 @@ export default function Welcome() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-6">
-                Trasforma i tuoi <br />
-                <span className="bg-gradient-to-r from-green-400 to-purple-400 bg-clip-text text-transparent">
-                  crediti fiscali
+                🚨 TEST MODIFICHE 🚨 <br />
+                <span className="bg-gradient-to-r from-red-400 to-yellow-400 bg-clip-text text-transparent">
+                  CREDITI FISCALI
                 </span> <br />
-                in liquidità immediata
+                IN LIQUIDITÀ IMMEDIATA
               </h1>
 
               <p className="text-xl text-slate-400 mb-8 leading-relaxed">
