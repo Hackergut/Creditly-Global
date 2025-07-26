@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import { User } from "@/api/entities";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -33,34 +33,11 @@ import {
 } from "lucide-react";
 
 export default function Landing() {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [email, setEmail] = useState('');
-
-  useEffect(() => {
-    checkAuth();
-  }, []);
-
-  const checkAuth = async () => {
-    try {
-      const userData = await User.me();
-      if (userData) {
-        window.location.href = "/Dashboard";
-        return;
-      }
-    } catch (error) {
-      console.log("User not authenticated");
-    }
-    setLoading(false);
-  };
-
-  const handleLogin = async () => {
-    try {
-      // Redirect to the specific login URL provided
-      window.location.href = "https://creditlyglobal.com/login?from_url=https://creditlyglobal.com/&app_id=688200a6c0a000b269dd75a1";
-    } catch (error) {
-      console.error("Login error:", error);
-    }
+  const navigate = useNavigate();
+  
+  const handleLogin = () => {
+    navigate('/login');
   };
 
   const handleNewsletterSignup = (e) => {
@@ -69,14 +46,6 @@ export default function Landing() {
     console.log("Newsletter signup:", email);
     setEmail('');
   };
-
-  if (loading) {
-    return (
-      <div className="min-h-screen antialiased overflow-x-hidden text-slate-100 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-400"></div>
-      </div>
-    );
-  }
 
   const features = [
     {

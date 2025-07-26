@@ -1,9 +1,8 @@
 
 
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { User } from "@/api/entities";
 import {
   Menu,
   X as CloseIcon, // Renamed X to CloseIcon as per outline
@@ -59,13 +58,10 @@ const navigationItems = [
 
 // Componente separato per PublicHomepage
 const PublicHomepage = React.memo(() => {
-  const handleLogin = async () => {
-    try {
-      // Redirect to the specific login URL for external access
-      window.location.href = "https://creditlyglobal.com/login?from_url=https://creditlyglobal.com/&app_id=688200a6c0a000b269dd75a1";
-    } catch (error) {
-      console.error("Login error:", error);
-    }
+  const navigate = useNavigate();
+  
+  const handleLogin = () => {
+    navigate('/login');
   };
 
   return (
