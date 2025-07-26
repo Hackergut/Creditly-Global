@@ -52,6 +52,17 @@ export const auth = {
     return { data, error }
   },
 
+  // Sign in with Apple
+  signInWithApple: async () => {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: 'apple',
+      options: {
+        redirectTo: 'https://www.creditlyglobal.com/auth/callback'
+      }
+    })
+    return { data, error }
+  },
+
   // Sign out
   signOut: async () => {
     const { error } = await supabase.auth.signOut()

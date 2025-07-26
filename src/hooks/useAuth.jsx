@@ -74,6 +74,16 @@ export const AuthProvider = ({ children }) => {
     }
   }
 
+  const signInWithApple = async () => {
+    try {
+      const { data, error } = await auth.signInWithApple()
+      if (error) throw error
+      return { data, error: null }
+    } catch (error) {
+      return { data: null, error }
+    }
+  }
+
   const signOut = async () => {
     try {
       const { error } = await auth.signOut()
@@ -111,6 +121,7 @@ export const AuthProvider = ({ children }) => {
     signIn,
     signUp,
     signInWithGoogle,
+    signInWithApple,
     signOut,
     resetPassword,
     updatePassword,
