@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { useToast } from '@/components/ui/use-toast'
+import Captcha from '@/components/Captcha'
 import {
   LogIn,
   Mail,
@@ -202,6 +203,12 @@ export default function Login() {
                   </button>
                 </div>
               </div>
+
+              {/* Captcha */}
+              <Captcha onVerify={(token) => {
+                // Handle captcha verification
+                console.log('Captcha verified:', token)
+              }} />
 
               {/* Submit Button */}
               <Button
