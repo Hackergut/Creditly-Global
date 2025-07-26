@@ -139,7 +139,7 @@ export default function Welcome() {
             <div className="flex items-center space-x-4">
               <Button
                 onClick={handleLogin}
-                className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-medium hover:from-green-600 hover:to-green-700 transition-all duration-200 hover:scale-105 shadow-lg"
+                className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-medium hover:from-green-600 hover:to-green-700 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-green-500/25"
               >
                 <LogIn className="w-4 h-4 mr-2" />
                 Accedi Ora
@@ -211,7 +211,7 @@ export default function Welcome() {
                     {/* Main Login Button */}
                     <Button
                       onClick={handleLogin}
-                      className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white h-14 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                      className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white h-14 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-green-500/50 hover:brightness-110"
                     >
                       <LogIn className="w-5 h-5 mr-3" />
                       Accedi con Google
@@ -252,7 +252,7 @@ export default function Welcome() {
                       <Button
                         onClick={handleLogin}
                         variant="outline"
-                        className="w-full border-slate-600 text-slate-300 hover:bg-slate-700/30 hover:text-white hover:border-slate-500 transition-all duration-300 rounded-xl h-12"
+                        className="w-full border-slate-600 text-slate-300 hover:bg-slate-700/30 hover:text-white hover:border-slate-500 transition-all duration-300 rounded-xl h-12 hover:shadow-slate-500/25"
                       >
                         <Sparkles className="w-4 h-4 mr-2" />
                         Registrati Gratis
@@ -388,7 +388,7 @@ export default function Welcome() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 onClick={handleLogin}
-                className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 text-lg font-medium rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-200 hover:scale-105 shadow-lg"
+                className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 text-lg font-medium rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-green-500/50 hover:brightness-110"
               >
                 <Sparkles className="w-5 h-5 mr-2" />
                 Inizia la Valutazione Gratuita
@@ -396,7 +396,7 @@ export default function Welcome() {
               </Button>
               <Button
                 variant="outline"
-                className="px-8 py-4 text-lg font-medium rounded-xl border-slate-600 hover:bg-slate-800 text-slate-300 hover:text-white hover:border-slate-500 transition-all duration-200"
+                className="px-8 py-4 text-lg font-medium rounded-xl border-slate-600 hover:bg-slate-800 text-slate-300 hover:text-white hover:border-slate-500 transition-all duration-200 hover:shadow-slate-500/25"
                 onClick={() => window.open('tel:+390612345678')}
               >
                 <PlayCircle className="w-5 h-5 mr-2" />
@@ -408,9 +408,9 @@ export default function Welcome() {
       </section>
 
       {/* Footer Completo */}
-      <footer className="py-16 bg-slate-900/80 backdrop-blur-sm border-t border-slate-800 relative z-10">
+      <footer className="py-12 bg-slate-900/80 backdrop-blur-sm border-t border-slate-800 relative z-10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+          <div className="grid md:grid-cols-4 gap-6 mb-6">
             {/* Logo e Descrizione */}
             <div className="md:col-span-1">
               <div className="flex items-center space-x-3 mb-4">
@@ -484,8 +484,8 @@ export default function Welcome() {
           </div>
 
           {/* Contatti e Info Legali */}
-          <div className="border-t border-slate-800 pt-8 mb-8">
-            <div className="grid md:grid-cols-2 gap-8">
+          <div className="border-t border-slate-800 pt-6 mb-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {/* Informazioni Societarie */}
               <div>
                 <h4 className="font-semibold text-white mb-4">MANAGEMENT E SERVIZI S.R.L.S.</h4>
@@ -533,8 +533,8 @@ export default function Welcome() {
           </div>
 
           {/* Link Legali */}
-          <div className="border-t border-slate-800 pt-6 mb-6">
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
+          <div className="border-t border-slate-800 pt-4 mb-4">
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
               <a href="#" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="text-slate-400 hover:text-white transition-colors">Termini di Servizio</a>
               <a href="#" className="text-slate-400 hover:text-white transition-colors">Cookie Policy</a>
@@ -545,8 +545,8 @@ export default function Welcome() {
           </div>
 
           {/* Copyright e Certificazioni */}
-          <div className="text-center border-t border-slate-800 pt-6">
-            <div className="flex flex-wrap justify-center items-center gap-4 mb-4">
+          <div className="text-center border-t border-slate-800 pt-4">
+            <div className="flex flex-wrap justify-center items-center gap-3 mb-3">
               <Badge className="bg-green-500/20 text-green-400 border-green-500/30">
                 ISO 27001 Certified
               </Badge>
@@ -561,11 +561,11 @@ export default function Welcome() {
             <p className="text-slate-400 text-sm mb-2">
               © 2024 Creditly Global - MANAGEMENT E SERVIZI S.R.L.S. Tutti i diritti riservati.
             </p>
-            <p className="text-slate-500 text-xs">
+            <p className="text-slate-500 text-xs mb-2">
               Questo sito è protetto da reCAPTCHA e si applicano la Privacy Policy e i Termini di Servizio di Google.
             </p>
 
-            <div className="flex justify-center items-center mt-4 space-x-4 text-xs text-slate-500">
+            <div className="flex justify-center items-center mt-2 space-x-3 text-xs text-slate-500">
               <span>Powered by</span>
               <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/03d2053c2_JJJJ.png" alt="CG" className="w-4 h-4 opacity-50" />
               <span>Advanced Technology</span>
