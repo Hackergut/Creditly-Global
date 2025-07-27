@@ -185,6 +185,23 @@ export const db = {
     
     updateProfile: (userId, data) => {
       return supabase.from('profiles').update(data).eq('id', userId)
+    },
+
+    getCurrentUserProfile: async () => {
+      const { data: { user }, error: userError } = await supabase.auth.getUser()
+      if (userError || !user) return { profile: null, error: userError }
+      
+      const { data: profile, error } = await supabase
+        .from('profiles')
+        .select('*')
+        .eq('id', user.id)
+        .single()
+      
+      return { profile, error }
+    },
+
+    createProfile: (profileData) => {
+      return supabase.from('profiles').insert(profileData)
     }
   },
 
