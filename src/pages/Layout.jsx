@@ -275,7 +275,7 @@ export default function Layout({ children, currentPageName }) {
     );
   }
 
-  if (!user && !location.pathname.includes('/welcome') && !location.pathname.includes('/onboarding') && !location.pathname.includes('/login')) {
+  if (!user && !location.pathname.includes('/welcome') && !location.pathname.includes('/onboarding') && !location.pathname.includes('/login') && !location.pathname.includes('/landingmodern') && location.pathname !== '/') {
     window.location.href = createPageUrl("Welcome");
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">

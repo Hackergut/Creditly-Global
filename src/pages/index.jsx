@@ -20,7 +20,7 @@ import GuidaCrediti from "./GuidaCrediti";
 
 import ArticoloBlog from "./ArticoloBlog";
 
-import Landing from "./Landing";
+import LandingModern from "./LandingModern";
 
 import Home from "./Home";
 
@@ -76,7 +76,7 @@ const PAGES = {
     
     ArticoloBlog: ArticoloBlog,
     
-    Landing: Landing,
+    LandingModern: LandingModern,
     
     Home: Home,
     
@@ -107,6 +107,11 @@ const PAGES = {
 }
 
 function _getCurrentPage(url) {
+    // Handle root path
+    if (url === '/' || url === '') {
+        return 'LandingModern';
+    }
+    
     if (url.endsWith('/')) {
         url = url.slice(0, -1);
     }
@@ -116,7 +121,7 @@ function _getCurrentPage(url) {
     }
 
     const pageName = Object.keys(PAGES).find(page => page.toLowerCase() === urlLastPart.toLowerCase());
-    return pageName || Object.keys(PAGES)[0];
+    return pageName || 'LandingModern';
 }
 
 // Create a wrapper component that uses useLocation inside the Router context
@@ -124,13 +129,16 @@ function PagesContent() {
     const location = useLocation();
     const currentPage = _getCurrentPage(location.pathname);
     
+    // Render LandingModern directly without Layout
+    if (location.pathname === '/' || location.pathname === '/LandingModern') {
+        return <LandingModern />;
+    }
+    
     return (
         <Layout currentPageName={currentPage}>
             <Routes>            
                 {/* Public Routes */}
-                <Route path="/" element={<Welcome />} />
                 <Route path="/Welcome" element={<Welcome />} />
-                <Route path="/Landing" element={<Landing />} />
                 <Route path="/Contact" element={<Contact />} />
                 <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
                 <Route path="/TermsOfService" element={<TermsOfService />} />

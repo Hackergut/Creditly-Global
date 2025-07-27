@@ -3,6 +3,15 @@ import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
+// Helper function to get the correct redirect URL
+const getRedirectUrl = () => {
+  const isProduction = window.location.hostname !== 'localhost'
+  const baseUrl = isProduction 
+    ? 'https://www.creditlyglobal.com'
+    : window.location.origin
+  return `${baseUrl}/auth/callback`
+}
+
 if (!supabaseUrl || !supabaseAnonKey) {
   throw new Error('Missing Supabase environment variables. Please check your .env file.')
 }
@@ -46,7 +55,11 @@ export const auth = {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${window.location.origin}/auth/callback`
+        redirectTo: getRedirectUrl(),
+        queryParams: {
+          access_type: 'offline',
+          prompt: 'consent'
+        }
       }
     })
     return { data, error }
@@ -57,7 +70,7 @@ export const auth = {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'apple',
       options: {
-        redirectTo: `${window.location.origin}/auth/callback`
+        redirectTo: getRedirectUrl()
       }
     })
     return { data, error }
@@ -89,7 +102,7 @@ export const auth = {
   // Reset password
   resetPassword: async (email) => {
     const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${window.location.origin}/auth/reset-password`
+      redirectTo: getRedirectUrl().replace('/auth/callback', '/auth/reset-password')
     })
     return { data, error }
   },

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conferma la tua iscrizione - Creditly Global</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+        .header h1 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .welcome-text {
+            font-size: 18px;
+            color: #374151;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .description {
+            color: #6b7280;
+            margin-bottom: 30px;
+            text-align: center;
+            line-height: 1.7;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+        }
+        .features {
+            background-color: #f9fafb;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        .features h3 {
+            color: #374151;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            color: #6b7280;
+            position: relative;
+            padding-left: 25px;
+        }
+        .feature-list li:before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .footer {
+            background-color: #f9fafb;
+            padding: 20px 30px;
+            text-align: center;
+            border-top: 1px solid #e5e7eb;
+        }
+        .footer p {
+            color: #6b7280;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .social-links {
+            margin-top: 15px;
+        }
+        .social-links a {
+            color: #10b981;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .security-note {
+            background-color: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .security-note p {
+            color: #92400e;
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/03d2053c2_JJJJ.png" alt="Creditly Global" class="logo">
+            <h1>Benvenuto su Creditly Global!</h1>
+        </div>
+        
+        <div class="content">
+            <p class="welcome-text">🎉 Grazie per esserti iscritto!</p>
+            
+            <p class="description">
+                Sei a un passo dall'accesso alla piattaforma più avanzata per la gestione dei crediti fiscali in Italia. 
+                Conferma la tua email per iniziare a ottimizzare i tuoi crediti fiscali.
+            </p>
+            
+            <div style="text-align: center;">
+                <a href="{{ .ConfirmationURL }}" class="cta-button">
+                    ✅ Conferma la tua email
+                </a>
+            </div>
+            
+            <div class="features">
+                <h3>🚀 Cosa otterrai con Creditly Global:</h3>
+                <ul class="feature-list">
+                    <li>Analisi automatica dei tuoi crediti fiscali</li>
+                    <li>Consulenza esperta di commercialisti certificati</li>
+                    <li>Gestione completa di tutti i tipi di crediti</li>
+                    <li>Dashboard intuitiva e report dettagliati</li>
+                    <li>Supporto dedicato e assistenza continua</li>
+                    <li>Massimizzazione del valore dei tuoi crediti</li>
+                </ul>
+            </div>
+            
+            <div class="security-note">
+                <p>🔒 <strong>Sicurezza:</strong> Questo link è valido per 24 ore. Se non hai richiesto tu questa iscrizione, ignora questa email.</p>
+            </div>
+            
+            <p style="text-align: center; color: #6b7280; font-size: 14px;">
+                Hai domande? Contattaci su <a href="mailto:support@creditlyglobal.com" style="color: #10b981;">support@creditlyglobal.com</a>
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Creditly Global</strong></p>
+            <p>Piattaforma leader per la gestione dei crediti fiscali</p>
+            <div class="social-links">
+                <a href="https://www.creditlyglobal.com">Sito Web</a> |
+                <a href="https://www.creditlyglobal.com/PrivacyPolicy">Privacy</a> |
+                <a href="https://www.creditlyglobal.com/TermsOfService">Termini</a>
+            </div>
+            <p style="margin-top: 15px; font-size: 12px; color: #9ca3af;">
+                © 2024 Creditly Global. Tutti i diritti riservati.
+            </p>
+        </div>
+    </div>
+</body>
+</html> 
