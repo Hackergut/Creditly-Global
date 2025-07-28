@@ -26,7 +26,9 @@ import {
   BarChart3,
   Target,
   Lightbulb,
-  HeartHandshake
+  HeartHandshake,
+  MessageCircle,
+  Bot
 } from "lucide-react";
 
 export default function LandingNew() {
@@ -80,6 +82,18 @@ export default function LandingNew() {
       title: "Rete Nazionale",
       description: "Partner in tutta Italia per supporto locale e consulenza",
       color: "bg-indigo-500/10 text-indigo-400"
+    },
+    {
+      icon: MessageCircle,
+      title: "Canale Telegram Live",
+      description: "Connessione diretta al canale dedicato per aggiornamenti in tempo reale",
+      color: "bg-teal-500/10 text-teal-400"
+    },
+    {
+      icon: Bot,
+      title: "Chatbot AI H24",
+      description: "Assistenza intelligente integrata nel sistema, disponibile 24 ore su 24",
+      color: "bg-pink-500/10 text-pink-400"
     }
   ];
 
@@ -388,6 +402,102 @@ export default function LandingNew() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+      {/* Live Communication Section */}
+      <section className="py-20 bg-gradient-to-r from-teal-500/10 to-pink-500/10 relative z-10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
+              Comunicazione <span className="bg-gradient-to-r from-teal-400 to-pink-400 bg-clip-text text-transparent">Live H24</span>
+            </h2>
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+              Resta sempre connesso con il nostro team e ricevi assistenza immediata quando ne hai bisogno
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Telegram Channel */}
+            <div className="backdrop-filter backdrop-blur-12px bg-slate-800/30 border-2 border-teal-500/30 rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-xl">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex-1">
+                  <div className="flex items-center mb-4">
+                    <MessageCircle className="w-8 h-8 text-teal-400 mr-3" />
+                    <h3 className="text-2xl font-bold text-white">Canale Telegram Dedicato</h3>
+                  </div>
+                  <p className="text-slate-300 mb-6 leading-relaxed">
+                    Unisciti al nostro canale Telegram ufficiale per ricevere aggiornamenti in tempo reale su:
+                  </p>
+                  <ul className="space-y-2 text-slate-400 mb-6">
+                    <li className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-teal-400 mr-2" />
+                      Novità normative e fiscali
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-teal-400 mr-2" />
+                      Opportunità di mercato
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-teal-400 mr-2" />
+                      Consigli da esperti
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-teal-400 mr-2" />
+                      Notifiche personalizzate
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <Button
+                onClick={handleLogin}
+                className="w-full bg-gradient-to-r from-teal-500 to-teal-600 text-white px-6 py-3 font-medium rounded-xl hover:from-teal-600 hover:to-teal-700 transition-all duration-200 hover:scale-105 shadow-lg"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Unisciti al Canale
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </div>
+            
+            {/* AI Chatbot */}
+            <div className="backdrop-filter backdrop-blur-12px bg-slate-800/30 border-2 border-pink-500/30 rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-xl">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex-1">
+                  <div className="flex items-center mb-4">
+                    <Bot className="w-8 h-8 text-pink-400 mr-3" />
+                    <h3 className="text-2xl font-bold text-white">Chatbot AI Integrato</h3>
+                  </div>
+                  <p className="text-slate-300 mb-6 leading-relaxed">
+                    Assistenza intelligente disponibile 24 ore su 24, 7 giorni su 7:
+                  </p>
+                  <ul className="space-y-2 text-slate-400 mb-6">
+                    <li className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
+                      Risposte immediate a domande frequenti
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
+                      Calcoli automatici dei crediti
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
+                      Guida passo-passo ai processi
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
+                      Connessione diretta con esperti
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <Button
+                onClick={handleLogin}
+                className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white px-6 py-3 font-medium rounded-xl hover:from-pink-600 hover:to-pink-700 transition-all duration-200 hover:scale-105 shadow-lg"
+              >
+                <Bot className="w-5 h-5 mr-2" />
+                Prova il Chatbot
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>
