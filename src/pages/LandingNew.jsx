@@ -15,7 +15,6 @@ import {
   Phone,
   Mail,
   MapPin,
-  LogIn,
   Sparkles,
   Globe,
   Calculator,
@@ -27,8 +26,7 @@ import {
   BarChart3,
   Target,
   Lightbulb,
-  HeartHandshake,
-  PlayCircle
+  HeartHandshake
 } from "lucide-react";
 
 export default function LandingNew() {
@@ -176,14 +174,6 @@ export default function LandingNew() {
               </nav>
               <Button
                 onClick={handleLogin}
-                variant="outline"
-                className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white hover:border-slate-500 transition-all duration-200"
-              >
-                <LogIn className="w-4 h-4 mr-2" />
-                Accedi
-              </Button>
-              <Button
-                onClick={handleLogin}
                 className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-medium hover:from-green-600 hover:to-green-700 transition-all duration-200 hover:scale-105 shadow-lg"
               >
                 Inizia Gratis
@@ -219,13 +209,6 @@ export default function LandingNew() {
               <Sparkles className="w-5 h-5 mr-2" />
               Richiedi Valutazione Gratuita
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button
-              variant="outline" 
-              className="px-8 py-4 text-lg font-medium rounded-xl border-slate-600 hover:bg-slate-800 text-slate-300 hover:text-white hover:border-slate-500 transition-all duration-200 group"
-            >
-              <PlayCircle className="w-5 h-5 mr-2 group-hover:text-green-400 transition-colors" />
-              Guarda Demo
             </Button>
           </div>
           {/* Stats */}
@@ -426,12 +409,6 @@ export default function LandingNew() {
                 <Sparkles className="w-5 h-5 mr-2" />
                 Inizia la Valutazione Gratuita
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button
-                variant="outline"
-                className="px-8 py-4 text-lg font-medium rounded-xl border-slate-600 hover:bg-slate-800 text-slate-300 hover:text-white hover:border-slate-500 transition-all duration-200"
-              >
-                Parla con un Esperto
               </Button>
             </div>
             {/* Newsletter Signup */}
