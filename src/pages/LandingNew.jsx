@@ -161,9 +161,10 @@ export default function LandingNew() {
 
   return (
     <div className="min-h-screen antialiased overflow-x-hidden text-slate-100 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Background Effects */}
-      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-green-400/10 via-transparent to-transparent pointer-events-none"></div>
-      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-purple-400/5 via-transparent to-transparent pointer-events-none"></div>
+      {/* Enhanced Background Effects */}
+      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-green-400/15 via-transparent to-transparent pointer-events-none"></div>
+      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-purple-400/10 via-transparent to-transparent pointer-events-none"></div>
+      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-400/8 via-transparent to-transparent pointer-events-none"></div>
       {/* Header */}
       <header className="py-6 relative z-10 sticky top-0 backdrop-blur-sm bg-slate-900/80">
         <div className="max-w-7xl mx-auto px-6">
@@ -230,7 +231,7 @@ export default function LandingNew() {
             {stats.map((stat, index) => {
               const IconComponent = stat.icon;
               return (
-                <div key={index} className="backdrop-filter backdrop-blur-12px bg-slate-800/30 border-2 border-slate-700/60 rounded-2xl p-6 hover:scale-105 transition-all duration-300 shadow-xl">
+                <div key={index} className="backdrop-filter backdrop-blur-12px bg-slate-800/40 border-2 border-slate-600/70 rounded-2xl p-6 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl">
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
                       <p className="text-sm font-medium text-slate-300 mb-2">{stat.label}</p>
@@ -261,7 +262,7 @@ export default function LandingNew() {
             {creditTypes.map((credit, index) => {
               const IconComponent = credit.icon;
               return (
-                <Card key={index} className={`backdrop-filter backdrop-blur-8px bg-slate-800/20 border-2 ${credit.color.split(' ')[1]} rounded-2xl hover:scale-105 transition-all duration-300 group`}>
+                <Card key={index} className={`backdrop-filter backdrop-blur-12px bg-slate-800/35 border-2 ${credit.color.split(' ')[1]} rounded-2xl hover:scale-105 transition-all duration-300 group hover:shadow-2xl`}>
                   <CardContent className="p-6 text-center">
                     <div className={`w-16 h-16 ${credit.color.split(' ')[0]} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                       <IconComponent className="w-8 h-8" />
@@ -297,7 +298,7 @@ export default function LandingNew() {
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                <div key={index} className="backdrop-filter backdrop-blur-8px bg-slate-800/20 border border-slate-700/50 rounded-2xl p-8 hover:scale-105 transition-all duration-300 group">
+                <div key={index} className="backdrop-filter backdrop-blur-12px bg-slate-800/35 border-2 border-slate-600/60 rounded-2xl p-8 hover:scale-105 transition-all duration-300 group hover:shadow-2xl">
                   <div className={`w-16 h-16 ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <IconComponent className="w-8 h-8" />
                   </div>
@@ -544,33 +545,80 @@ export default function LandingNew() {
         </div>
       </section>
       {/* Footer */}
-      <footer id="contatti" className="py-16 bg-slate-900/50 backdrop-blur-sm border-t border-slate-800 relative z-10">
+      <footer id="contatti" className="py-20 bg-slate-900/60 backdrop-blur-md border-t border-slate-700/50 relative z-10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
             {/* Company Info */}
-            <div className="md:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
-                <img
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/112a3b250_CGNEWWWWW.png"
-                  alt="Creditly Global"
-                  className="w-10 h-10 rounded-lg"
-                />
-                <span className="text-2xl font-bold text-white">Creditly Global</span>
+            <div className="lg:col-span-2">
+              <div className="flex items-center space-x-4 mb-8">
+                <div className="relative">
+                  <img
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/112a3b250_CGNEWWWWW.png"
+                    alt="Creditly Global"
+                    className="w-16 h-16 rounded-xl shadow-lg"
+                  />
+                  <div className="absolute -inset-1 bg-gradient-to-r from-green-500/20 to-purple-500/20 rounded-xl blur-sm"></div>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-2">Creditly Global</h3>
+                  <p className="text-green-400 font-medium">Piattaforma Leader Italia</p>
+                </div>
               </div>
-              <p className="text-slate-400 mb-6 max-w-md">
+              <p className="text-slate-300 text-lg leading-relaxed mb-8 max-w-2xl">
                 La piattaforma leader in Italia per la gestione e monetizzazione dei crediti fiscali. 
-                Trasformiamo la complessità fiscale in opportunità di liquidità.
+                Trasformiamo la complessità fiscale in opportunità di liquidità immediata.
               </p>
-              <div className="flex space-x-4">
-                  <Mail className="w-4 h-4 text-slate-400" />
-                  <span className="text-slate-400">info@creditlyglobal.com</span>
+              <div className="flex items-center space-x-6">
+                <div className="flex items-center space-x-2">
+                  <Mail className="w-5 h-5 text-green-400" />
+                  <span className="text-slate-300 font-medium">info@creditlyglobal.com</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Phone className="w-5 h-5 text-green-400" />
+                  <span className="text-slate-300 font-medium">+39 02 1234 5678</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Quick Stats */}
+            <div className="lg:col-span-1">
+              <h4 className="text-xl font-bold text-white mb-6">I Nostri Numeri</h4>
+              <div className="space-y-4">
+                <div className="backdrop-filter backdrop-blur-8px bg-slate-800/30 border border-slate-700/50 rounded-xl p-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-300">Aziende Servite</span>
+                    <span className="text-2xl font-bold text-green-400">500+</span>
+                  </div>
+                </div>
+                <div className="backdrop-filter backdrop-blur-8px bg-slate-800/30 border border-slate-700/50 rounded-xl p-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-300">Crediti Processati</span>
+                    <span className="text-2xl font-bold text-green-400">€50M+</span>
+                  </div>
+                </div>
+                <div className="backdrop-filter backdrop-blur-8px bg-slate-800/30 border border-slate-700/50 rounded-xl p-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-300">Tasso Approvazione</span>
+                    <span className="text-2xl font-bold text-green-400">95%</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="border-t border-slate-800 pt-8 text-center">
-            <p className="text-slate-400">
-              © 2024 Creditly Global. Tutti i diritti riservati. | P.IVA: 12345678901
-            </p>
+          
+          <div className="border-t border-slate-700/50 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <p className="text-slate-400 mb-4 md:mb-0">
+                © 2024 Creditly Global. Tutti i diritti riservati.
+              </p>
+              <div className="flex items-center space-x-6">
+                <span className="text-slate-400">P.IVA: 12345678901</span>
+                <span className="text-slate-400">|</span>
+                <span className="text-slate-400">Privacy Policy</span>
+                <span className="text-slate-400">|</span>
+                <span className="text-slate-400">Termini di Servizio</span>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
