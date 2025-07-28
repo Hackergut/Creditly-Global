@@ -50,21 +50,15 @@ export default function LandingNew() {
   const features = [
     {
       icon: Shield,
-      title: "Sicurezza Bancaria",
-      description: "Dati protetti con crittografia di livello bancario e conformità GDPR",
+      title: "Sicurezza & Conformità",
+      description: "Dati protetti con crittografia bancaria e piena conformità GDPR",
       color: "bg-blue-500/10 text-blue-400"
     },
     {
       icon: Zap,
-      title: "Valutazione in 24h",
-      description: "Analisi rapida dei tuoi crediti con risposta garantita entro 24 ore",
+      title: "Valutazione Rapida",
+      description: "Analisi automatica dei crediti con risposta garantita in 24 ore",
       color: "bg-yellow-500/10 text-yellow-400"
-    },
-    {
-      icon: Users,
-      title: "Team di Esperti",
-      description: "Commercialisti e consulenti fiscali certificati al tuo servizio",
-      color: "bg-purple-500/10 text-purple-400"
     },
     {
       icon: TrendingUp,
@@ -73,34 +67,22 @@ export default function LandingNew() {
       color: "bg-green-500/10 text-green-400"
     },
     {
-      icon: Calculator,
-      title: "Calcolo Automatico",
-      description: "Algoritmi avanzati per il calcolo preciso del valore dei crediti",
-      color: "bg-cyan-500/10 text-cyan-400"
-    },
-    {
-      icon: Globe,
-      title: "Rete Nazionale",
-      description: "Partner in tutta Italia per supporto locale e consulenza",
-      color: "bg-indigo-500/10 text-indigo-400"
+      icon: ShoppingCart,
+      title: "Marketplace Completo",
+      description: "Acquista e vendi crediti con flessibilità totale",
+      color: "bg-emerald-500/10 text-emerald-400"
     },
     {
       icon: MessageCircle,
-      title: "Canale Telegram Live",
-      description: "Connessione diretta al canale dedicato per aggiornamenti in tempo reale",
+      title: "Supporto Live H24",
+      description: "Canale Telegram e chatbot AI sempre disponibili",
       color: "bg-teal-500/10 text-teal-400"
     },
     {
-      icon: Bot,
-      title: "Chatbot AI H24",
-      description: "Assistenza intelligente integrata nel sistema, disponibile 24 ore su 24",
-      color: "bg-pink-500/10 text-pink-400"
-    },
-    {
-      icon: ShoppingCart,
-      title: "Marketplace Dedicato",
-      description: "Acquista e vendi crediti fiscali con flessibilità totale per ogni esigenza",
-      color: "bg-emerald-500/10 text-emerald-400"
+      icon: Users,
+      title: "Team di Esperti",
+      description: "Commercialisti e consulenti certificati al tuo servizio",
+      color: "bg-purple-500/10 text-purple-400"
     }
   ];
 
@@ -421,7 +403,7 @@ export default function LandingNew() {
               <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">Marketplace</span> Dedicato
             </h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              Acquista e vendi crediti fiscali con flessibilità totale. Gestisci i tuoi crediti come preferisci!
+              Acquista crediti già maturati o vendi i tuoi per liquidità immediata. Flessibilità totale per ogni esigenza.
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
@@ -437,25 +419,20 @@ export default function LandingNew() {
                 </div>
               </div>
               <p className="text-slate-300 mb-6 leading-relaxed">
-                Accedi al nostro marketplace per acquistare crediti fiscali da altre aziende. 
-                Ottieni crediti già maturati e approvati per compensare le tue imposte.
+                Acquista crediti fiscali già maturati e approvati da altre aziende per compensare le tue imposte.
               </p>
               <ul className="space-y-3 text-slate-400 mb-8">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-emerald-400 mr-3" />
-                  Crediti già verificati e approvati
+                  Crediti verificati e approvati
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-emerald-400 mr-3" />
-                  Prezzi competitivi di mercato
+                  Prezzi competitivi
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-emerald-400 mr-3" />
-                  Transazioni sicure e trasparenti
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-3" />
-                  Supporto legale completo
+                  Transazioni sicure
                 </li>
               </ul>
               <Button
@@ -480,21 +457,16 @@ export default function LandingNew() {
                 </div>
               </div>
               <p className="text-slate-300 mb-6 leading-relaxed">
-                Vendi i tuoi crediti fiscali maturati e ottieni liquidità immediata. 
-                Gestisci i prezzi e le condizioni secondo le tue esigenze.
+                Vendi i tuoi crediti fiscali maturati e ottieni liquidità immediata con controllo totale su prezzi e condizioni.
               </p>
               <ul className="space-y-3 text-slate-400 mb-8">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-blue-400 mr-3" />
-                  Controllo totale su prezzi e condizioni
+                  Controllo su prezzi e condizioni
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-blue-400 mr-3" />
-                  Liquidità immediata garantita
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-blue-400 mr-3" />
-                  Gestione flessibile delle vendite
+                  Liquidità immediata
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-blue-400 mr-3" />
@@ -541,7 +513,7 @@ export default function LandingNew() {
               Comunicazione <span className="bg-gradient-to-r from-teal-400 to-pink-400 bg-clip-text text-transparent">Live H24</span>
             </h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              Resta sempre connesso con il nostro team e ricevi assistenza immediata quando ne hai bisogno
+              Supporto immediato tramite canale Telegram e chatbot AI sempre disponibili
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -554,7 +526,7 @@ export default function LandingNew() {
                     <h3 className="text-2xl font-bold text-white">Canale Telegram Dedicato</h3>
                   </div>
                   <p className="text-slate-300 mb-6 leading-relaxed">
-                    Unisciti al nostro canale Telegram ufficiale per ricevere aggiornamenti in tempo reale su:
+                    Canale Telegram ufficiale per aggiornamenti in tempo reale su novità normative, opportunità di mercato e consigli da esperti.
                   </p>
                   <ul className="space-y-2 text-slate-400 mb-6">
                     <li className="flex items-center">
@@ -568,10 +540,6 @@ export default function LandingNew() {
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-teal-400 mr-2" />
                       Consigli da esperti
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-teal-400 mr-2" />
-                      Notifiche personalizzate
                     </li>
                   </ul>
                 </div>
@@ -595,24 +563,20 @@ export default function LandingNew() {
                     <h3 className="text-2xl font-bold text-white">Chatbot AI Integrato</h3>
                   </div>
                   <p className="text-slate-300 mb-6 leading-relaxed">
-                    Assistenza intelligente disponibile 24 ore su 24, 7 giorni su 7:
+                    Chatbot AI disponibile 24/7 per risposte immediate, calcoli automatici e guida ai processi.
                   </p>
                   <ul className="space-y-2 text-slate-400 mb-6">
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
-                      Risposte immediate a domande frequenti
+                      Risposte immediate
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
-                      Calcoli automatici dei crediti
+                      Calcoli automatici
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
-                      Guida passo-passo ai processi
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
-                      Connessione diretta con esperti
+                      Guida ai processi
                     </li>
                   </ul>
                 </div>
@@ -741,9 +705,9 @@ export default function LandingNew() {
               <div className="flex items-center space-x-6">
                 <span className="text-slate-400">P.IVA: 12345678901</span>
                 <span className="text-slate-400">|</span>
-                <span className="text-slate-400">Privacy Policy</span>
+                <a href="/PrivacyPolicy" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
                 <span className="text-slate-400">|</span>
-                <span className="text-slate-400">Termini di Servizio</span>
+                <a href="/TermsOfService" className="text-slate-400 hover:text-white transition-colors">Termini di Servizio</a>
               </div>
             </div>
           </div>
