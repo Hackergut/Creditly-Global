@@ -28,7 +28,8 @@ import {
   Lightbulb,
   HeartHandshake,
   MessageCircle,
-  Bot
+  Bot,
+  ShoppingCart
 } from "lucide-react";
 
 export default function LandingNew() {
@@ -94,6 +95,12 @@ export default function LandingNew() {
       title: "Chatbot AI H24",
       description: "Assistenza intelligente integrata nel sistema, disponibile 24 ore su 24",
       color: "bg-pink-500/10 text-pink-400"
+    },
+    {
+      icon: ShoppingCart,
+      title: "Marketplace Dedicato",
+      description: "Acquista e vendi crediti fiscali con flessibilità totale per ogni esigenza",
+      color: "bg-emerald-500/10 text-emerald-400"
     }
   ];
 
@@ -403,6 +410,126 @@ export default function LandingNew() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+      {/* Marketplace Section */}
+      <section className="py-20 bg-gradient-to-r from-emerald-500/10 to-blue-500/10 relative z-10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
+              <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">Marketplace</span> Dedicato
+            </h2>
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+              Acquista e vendi crediti fiscali con flessibilità totale. Gestisci i tuoi crediti come preferisci!
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {/* Acquista Crediti */}
+            <div className="backdrop-filter backdrop-blur-12px bg-slate-800/35 border-2 border-emerald-500/30 rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-xl">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mr-6">
+                  <ShoppingCart className="w-8 h-8 text-emerald-400" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Acquista Crediti</h3>
+                  <p className="text-emerald-400 font-medium">Opportunità di investimento</p>
+                </div>
+              </div>
+              <p className="text-slate-300 mb-6 leading-relaxed">
+                Accedi al nostro marketplace per acquistare crediti fiscali da altre aziende. 
+                Ottieni crediti già maturati e approvati per compensare le tue imposte.
+              </p>
+              <ul className="space-y-3 text-slate-400 mb-8">
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-3" />
+                  Crediti già verificati e approvati
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-3" />
+                  Prezzi competitivi di mercato
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-3" />
+                  Transazioni sicure e trasparenti
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-3" />
+                  Supporto legale completo
+                </li>
+              </ul>
+              <Button
+                onClick={handleLogin}
+                className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-3 font-medium rounded-xl hover:from-emerald-600 hover:to-emerald-700 transition-all duration-200 hover:scale-105 shadow-lg"
+              >
+                <ShoppingCart className="w-5 h-5 mr-2" />
+                Esplora Crediti Disponibili
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </div>
+            
+            {/* Vendi Crediti */}
+            <div className="backdrop-filter backdrop-blur-12px bg-slate-800/35 border-2 border-blue-500/30 rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-xl">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mr-6">
+                  <TrendingUp className="w-8 h-8 text-blue-400" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Vendi Crediti</h3>
+                  <p className="text-blue-400 font-medium">Liquidità immediata</p>
+                </div>
+              </div>
+              <p className="text-slate-300 mb-6 leading-relaxed">
+                Vendi i tuoi crediti fiscali maturati e ottieni liquidità immediata. 
+                Gestisci i prezzi e le condizioni secondo le tue esigenze.
+              </p>
+              <ul className="space-y-3 text-slate-400 mb-8">
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-blue-400 mr-3" />
+                  Controllo totale su prezzi e condizioni
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-blue-400 mr-3" />
+                  Liquidità immediata garantita
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-blue-400 mr-3" />
+                  Gestione flessibile delle vendite
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-blue-400 mr-3" />
+                  Supporto nella valutazione
+                </li>
+              </ul>
+              <Button
+                onClick={handleLogin}
+                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 font-medium rounded-xl hover:from-blue-600 hover:to-blue-700 transition-all duration-200 hover:scale-105 shadow-lg"
+              >
+                <TrendingUp className="w-5 h-5 mr-2" />
+                Inizia a Vendere
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </div>
+          </div>
+          
+          {/* Marketplace Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="backdrop-filter backdrop-blur-12px bg-slate-800/30 border-2 border-slate-600/70 rounded-2xl p-6 text-center">
+              <div className="text-3xl font-bold text-emerald-400 mb-2">€25M+</div>
+              <div className="text-slate-300">Volume Scambiato</div>
+            </div>
+            <div className="backdrop-filter backdrop-blur-12px bg-slate-800/30 border-2 border-slate-600/70 rounded-2xl p-6 text-center">
+              <div className="text-3xl font-bold text-blue-400 mb-2">1,200+</div>
+              <div className="text-slate-300">Transazioni Completate</div>
+            </div>
+            <div className="backdrop-filter backdrop-blur-12px bg-slate-800/30 border-2 border-slate-600/70 rounded-2xl p-6 text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-2">98%</div>
+              <div className="text-slate-300">Soddisfazione Clienti</div>
+            </div>
+            <div className="backdrop-filter backdrop-blur-12px bg-slate-800/30 border-2 border-slate-600/70 rounded-2xl p-6 text-center">
+              <div className="text-3xl font-bold text-orange-400 mb-2">24h</div>
+              <div className="text-slate-300">Tempo Medio Chiusura</div>
+            </div>
           </div>
         </div>
       </section>
