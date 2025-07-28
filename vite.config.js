@@ -33,6 +33,8 @@ export default defineConfig({
       },
     },
   },
+  // Add base path for production
+  base: process.env.NODE_ENV === 'production' ? './' : '/',
   preview: {
     port: 4173,
     host: true,

@@ -20,9 +20,11 @@ import GuidaCrediti from "./GuidaCrediti";
 
 import ArticoloBlog from "./ArticoloBlog";
 
-import LandingModern from "./LandingModern";
+import LandingNew from "./LandingNew.jsx";
 
 import Home from "./Home";
+
+import TestPage from "./TestPage.jsx";
 
 
 
@@ -48,7 +50,7 @@ import Settings from "./Settings";
 
 import FirmaDigitale from "./FirmaDigitale";
 
-import Login from "./Login.jsx";
+import LoginNew from "./LoginNew.jsx";
 import AuthCallback from "./AuthCallback.jsx";
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
@@ -76,7 +78,7 @@ const PAGES = {
     
     ArticoloBlog: ArticoloBlog,
     
-    LandingModern: LandingModern,
+    LandingNew: LandingNew,
     
     Home: Home,
     
@@ -104,12 +106,14 @@ const PAGES = {
     
     FirmaDigitale: FirmaDigitale,
     
+    TestPage: TestPage,
+    
 }
 
 function _getCurrentPage(url) {
     // Handle root path
     if (url === '/' || url === '') {
-        return 'LandingModern';
+        return 'LandingNew';
     }
     
     if (url.endsWith('/')) {
@@ -121,7 +125,7 @@ function _getCurrentPage(url) {
     }
 
     const pageName = Object.keys(PAGES).find(page => page.toLowerCase() === urlLastPart.toLowerCase());
-    return pageName || 'LandingModern';
+    return pageName || 'LandingNew';
 }
 
 // Create a wrapper component that uses useLocation inside the Router context
@@ -129,9 +133,9 @@ function PagesContent() {
     const location = useLocation();
     const currentPage = _getCurrentPage(location.pathname);
     
-    // Render LandingModern directly without Layout
-    if (location.pathname === '/' || location.pathname === '/LandingModern') {
-        return <LandingModern />;
+    // Render LandingNew direttamente senza Layout
+    if (location.pathname === '/' || location.pathname === '/LandingNew') {
+        return <LandingNew />;
     }
     
     return (
@@ -147,7 +151,7 @@ function PagesContent() {
                 <Route path="/SupportCenter" element={<SupportCenter />} />
                 
                 {/* Auth Routes */}
-                <Route path="/login" element={<Login />} />
+                <Route path="/login" element={<LoginNew />} />
                 <Route path="/auth/callback" element={<AuthCallback />} />
                 
                 {/* Protected Routes */}

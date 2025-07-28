@@ -1,14 +1,17 @@
 import './App.css'
 import Pages from "@/pages/index.jsx"
 import { Toaster } from "@/components/ui/toaster"
-import { AuthProvider } from "@/hooks/useAuth"
+import { AuthProvider } from "@/hooks/useAuthSimple"
+import ErrorBoundary from "@/lib/errorBoundary.jsx"
 
 function App() {
   return (
-    <AuthProvider>
-      <Pages />
-      <Toaster />
-    </AuthProvider>
+    <ErrorBoundary>
+      <AuthProvider>
+        <Pages />
+        <Toaster />
+      </AuthProvider>
+    </ErrorBoundary>
   )
 }
 
