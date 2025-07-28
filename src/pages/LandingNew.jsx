@@ -229,16 +229,20 @@ export default function LandingNew() {
             </Button>
           </div>
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => {
               const IconComponent = stat.icon;
               return (
-                <div key={index} className="backdrop-filter backdrop-blur-8px bg-slate-800/20 border border-slate-700/50 rounded-2xl p-6 hover:scale-105 transition-all duration-300">
-                  <IconComponent className="w-8 h-8 text-green-400 mx-auto mb-3" />
-                  <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">
-                    {stat.number}
+                <div key={index} className="backdrop-filter backdrop-blur-12px bg-slate-800/30 border-2 border-slate-700/60 rounded-2xl p-6 hover:scale-105 transition-all duration-300 shadow-xl">
+                  <div className="flex items-center justify-between">
+                    <div className="flex-1">
+                      <p className="text-sm font-medium text-slate-300 mb-2">{stat.label}</p>
+                      <p className="text-2xl font-bold text-white">{stat.number}</p>
+                    </div>
+                    <div className="w-12 h-12 bg-green-500/25 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <IconComponent className="w-6 h-6 text-green-300" />
+                    </div>
                   </div>
-                  <div className="text-slate-400 text-sm">{stat.label}</div>
                 </div>
               );
             })}
@@ -455,7 +459,7 @@ export default function LandingNew() {
       {/* Footer */}
       <footer id="contatti" className="py-16 bg-slate-900/50 backdrop-blur-sm border-t border-slate-800 relative z-10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {/* Company Info */}
             <div className="md:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
@@ -474,26 +478,6 @@ export default function LandingNew() {
                   <Mail className="w-4 h-4 text-slate-400" />
                   <span className="text-slate-400">info@creditlyglobal.com</span>
               </div>
-            </div>
-            {/* Quick Links */}
-            <div>
-              <h4 className="font-semibold text-white mb-4">Link Rapidi</h4>
-              <ul className="space-y-2">
-                <li><a href="#servizi" className="text-slate-400 hover:text-white transition-colors">I Nostri Servizi</a></li>
-                <li><a href="#come-funziona" className="text-slate-400 hover:text-white transition-colors">Come Funziona</a></li>
-                <li><a href="#testimonianze" className="text-slate-400 hover:text-white transition-colors">Testimonianze</a></li>
-                <li><button onClick={handleLogin} className="text-slate-400 hover:text-white transition-colors">Area Clienti</button></li>
-              </ul>
-            </div>
-            {/* Support */}
-            <div>
-              <h4 className="font-semibold text-white mb-4">Supporto</h4>
-              <ul className="space-y-2">
-                <li><button onClick={handleLogin} className="text-slate-400 hover:text-white transition-colors">Centro Assistenza</button></li>
-                <li><button onClick={handleLogin} className="text-slate-400 hover:text-white transition-colors">Contattaci</button></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Termini di Servizio</a></li>
-              </ul>
             </div>
           </div>
           <div className="border-t border-slate-800 pt-8 text-center">
